@@ -1,0 +1,128 @@
+:root{
+    --pinary_color:#ffb49b;
+    --dark_color:#f0835e;
+    --light_color:#f7e1c5;
+    --white_color:#ffffff;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,var(--pinary_color),var(--light_color));
+}
+.content_area{
+    position: relative;
+    padding: 10px;
+    background-color: var(--white_color);
+    width: 420px;
+    box-shadow:  0.1px 2px 4px rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+.content_area p{
+    font-size: 17px;
+    color: var(--dark_color);
+
+}
+.content_area textarea{
+    width: 100%;
+    height: 280px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    border:1px solid black;
+}
+.content_area .qr_code_view_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 280px;
+    
+   
+    border-radius: 5px;
+    margin-top: 10px;
+    border:1px solid black;
+
+}
+.qr_code_view_area img{
+    width: 200px;
+    height: 200px;
+}
+.control_button{
+    display: flex;
+    align-items: center;
+
+}
+.control_button button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pinary_color);
+    color: var(--white_color);
+    font-size: 16px;
+    height: 10%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.control_button button:not(:first-child){
+    margin-left: 10px;
+}
+
+.control_button button:active{
+    transform: scale(0.9);
+}
+.control_button button.disable_button{
+    opacity:0.5 ;
+}
+
+.content_area .view_hide{
+    display: none !important;
+
+}
+@media (max-width:500px) {
+    .content_area{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+    }
+    
+}
+@media (max-width:263px) {
+
+    .content_area{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+    }
+    .control_button button{
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pinary_color);
+        color: var(--white_color);
+        font-size: 12px;
+        height: 10%;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+}
